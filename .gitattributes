@@ -4,3 +4,4 @@
 *.zst filter=lfs diff=lfs merge=lfs -text
 x86_64/** filter=lfs diff=lfs merge=lfs -text
 unigine-valley-1.0-1-x86_64.pkg.tar.zst filter=lfs diff=lfs merge=lfs -text
+online-repo/x64_86/unigine-valley-1.0-1-x86_64.pkg.tar.zst filter=lfs diff=lfs merge=lfs -text
