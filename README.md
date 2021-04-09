@@ -25,6 +25,7 @@ Main benefits to this is that a user will not need to interact with the command 
 5. Prime95
 6. Nvidia LTS drivers for the 390 series. 
 7. Discord
+8. Nvidia Optimus packages 
 
 
 ### Removed
@@ -35,6 +36,16 @@ This is removed as an effort to reduce the size of the ISO.
 3. Printer drivers
 4. Office
 5. Steam
+
+##Optimus notes
+
+I do not have an Optimus laptop to test this with. 
+
+You can run `glxinfo | grep "server glx vendor string"`. If you see 
+`SGI`, you are running on the Intel GPU. If you see `NVIDIA 
+Corporation`, you are running on the Nvidia GPU.
+
+
 
 
 ## Reproducability
