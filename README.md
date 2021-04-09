@@ -36,7 +36,9 @@ Main benefits to this is that a user will not need to interact with the command 
 
 All pkgbuild files and iso-profiles files will be provided in this repo. 
 
-##Credits
+ISO itself will not be provided here due to bandwidth limitations on this hosted repo, ISO downloads will be provided through Google Drive.
+
+## Credits
 
 Manjaro for providing documentation on how to make your own ISO: https://wiki.manjaro.org/index.php/Build_Manjaro_ISOs_with_buildiso
 
