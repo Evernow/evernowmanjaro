@@ -8,6 +8,12 @@ This custom build Manjaro ISO aims to be make it easier for a user to be able to
 
 Main benefits to this is that a user will not need to interact with the command line to install these tools, nor will they require an internet connection past downloading the ISO (which can be troublesome if a user does not have access to an ethernet connection and has an unsupported wifi card) 
 
+## Drawbacks
+
+1. This ISO is much bigger than the original, size is yet to be detemrined.
+2. This ISO is not an easy maintainance task, and adds additional hurdles, due to this all modifications will be minimal, no changes to how Manjaro behaves will be changed.
+
+
 ## Modifications
 
 ### Added
