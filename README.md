@@ -20,7 +20,7 @@ Main benefits to this is that a user will not need to interact with the command 
 
 1. Unigine-Valley
 2. Furmark
-3. GPU Monitoring tools
+3. GPU Monitoring tools (GWE for Nvidia, RadeonTop for AMD)
 4. Kernel Panic monitoring
 5. Prime95
 6. Nvidia LTS drivers for the 390 series. 
