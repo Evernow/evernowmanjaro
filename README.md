@@ -37,7 +37,7 @@ This is removed as an effort to reduce the size of the ISO.
 4. Office
 5. Steam
 
-##Optimus notes
+## Optimus notes
 
 I do not have an Optimus laptop to test this with. 
 
