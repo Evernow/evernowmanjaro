@@ -28,9 +28,12 @@ Main benefits to this is that a user will not need to interact with the command 
 
 
 ### Removed
+This is removed as an effort to reduce the size of the ISO.
 
 1. VLC
 2. qBittorrent
+3. Printer drivers
+
 
 ## Reproducability
 
