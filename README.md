@@ -11,7 +11,7 @@ Main benefits to this is that a user will not need to interact with the command 
 ## Drawbacks
 
 1. This ISO is much bigger than the original, size is yet to be detemrined.
-2. This ISO is not an easy maintainance task, and adds additional hurdles, due to this all modifications will be minimal, no changes to how Manjaro behaves will be changed.
+2. This ISO is not an easy maintainance task, and adds additional hurdles, due to this all modifications will be minimal, no changes to how Manjaro behaves will be made.
 
 
 ## Modifications
@@ -23,6 +23,8 @@ Main benefits to this is that a user will not need to interact with the command 
 3. GPU Monitoring tools
 4. Kernel Panic monitoring
 5. Prime95
+6. Nvidia LTS drivers for the 390 series. 
+7. Discord
 
 
 ### Removed
