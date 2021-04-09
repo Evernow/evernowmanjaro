@@ -36,6 +36,10 @@ This is removed as an effort to reduce the size of the ISO.
 3. Printer drivers
 4. Office
 5. Steam
+6. Snaps
+7. HPLIP
+8. Wallpapers
+9. Extra themes
 
 ## Optimus notes
 
