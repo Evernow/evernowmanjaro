@@ -30,3 +30,13 @@ Main benefits to this is that a user will not need to interact with the command 
 1. VLC
 2. qBittorrent
 
+## Reproducability
+
+All pkgbuild files and iso-profiles files will be provided in this repo. 
+
+##Credits
+
+Manjaro for providing documentation on how to make your own ISO: https://wiki.manjaro.org/index.php/Build_Manjaro_ISOs_with_buildiso
+
+Disconnected Systems for providing a guide on how to host a Manjaro repo on GitHub: https://disconnected.systems/blog/archlinux-repo-in-a-git-repo/
+
