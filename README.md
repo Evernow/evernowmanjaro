@@ -33,6 +33,8 @@ This is removed as an effort to reduce the size of the ISO.
 1. VLC
 2. qBittorrent
 3. Printer drivers
+4. Office
+5. Steam
 
 
 ## Reproducability
