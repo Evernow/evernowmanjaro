@@ -62,6 +62,7 @@ Corporation`, you are running on the Nvidia GPU.
 - [ ] Find an additional good GPU stress test 
 - [ ] Add more Wifi drivers
 - [ ] Look into viability of switching to the Minimal ISO style of Manjaro
+- [ ] Look into adding this Vulkan ray tracing benchmark as a loop, after finding a way to only having it run with RTX 20/30 series GPUs: https://github.com/GPSnoopy/RayTracingInVulkan 
 
 ## Reproducability
 
