@@ -4,6 +4,17 @@
 
 This custom build Manjaro ISO aims to be make it easier for a user to be able to determine if an issue is hardware or software based by making it as simple as possible to test it in Manjaro.
 
+## Requirements
+
+* A 64-bit CPU
+* 4 GB of ram
+* A 4 GB USB stick
+* A working internet connection to download the ISO and etcher. Internet connection is not required afterwards
+
+## Usage
+
+See [Usage text file](https://github.com/Evernow/evernowmanjaro/blob/main/Usage)
+
 ## Benefits
 
 Main benefits to this is that a user will not need to interact with the command line to install these tools, nor will they require an internet connection past downloading the ISO (which can be troublesome if a user does not have access to an ethernet connection and has an unsupported wifi card) 
