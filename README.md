@@ -27,6 +27,8 @@ Main benefits to this is that a user will not need to interact with the command 
 8. Nvidia Optimus packages 
 9. xdotool
 10. wmctrl
+11. glmark2* (Credit goes to [@CommandMC](https://github.com/CommandMC)) 
+12. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz)
 
 *These packages are maintained by me here to be able to control what they do and how they do it. Sources for them is in the repository.
 
