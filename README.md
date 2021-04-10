@@ -40,6 +40,9 @@ This is removed as an effort to reduce the size of the ISO.
 7. HPLIP
 8. Wallpapers
 9. Extra themes
+10. TimeShift
+11. Java
+12. DVD/CD reading/burning packages.
 
 ## Optimus notes
 
