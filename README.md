@@ -13,7 +13,7 @@ This custom build Manjaro ISO aims to be make it easier for a user to be able to
 
 ## Usage
 
-See [Usage text file](https://github.com/Evernow/evernowmanjaro/blob/main/Usage)
+See [this](https://github.com/Evernow/evernowmanjaro/wiki)
 
 ## Benefits
 
