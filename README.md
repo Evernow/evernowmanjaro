@@ -49,7 +49,12 @@ You can run `glxinfo | grep "server glx vendor string"`. If you see
 `SGI`, you are running on the Intel GPU. If you see `NVIDIA 
 Corporation`, you are running on the Nvidia GPU.
 
+## To do list
 
+- [x] Add .desktop files on the desktop to make it easier for a person to initiate stress tests
+- [ ] Find a way to add the Phoronix Test Suite (main issue is for offline use, and the fact we can't have this image be bigger than 4gb due to ram limitations)
+- [ ] Find an additional good GPU stress test 
+- [ ] Add more Wifi drivers
 
 
 ## Reproducability
