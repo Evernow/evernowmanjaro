@@ -31,15 +31,14 @@ Main benefits to this is that a user will not need to interact with the command 
 1. Unigine-Valley*
 2. Furmark*
 3. GPU Monitoring tools (GWE* for Nvidia, RadeonTop for AMD)
-4. Kernel Panic monitoring
-5. Prime95*
-6. Nvidia LTS drivers for the 390 series. 
-7. Discord
-8. Nvidia Optimus packages 
-9. xdotool
-10. wmctrl
-11. glmark2* (Credit goes to [@CommandMC](https://github.com/CommandMC)) 
-12. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz))
+4. Prime95*
+5. Nvidia LTS drivers for the 390 series. 
+6. Discord
+7. Nvidia Optimus packages 
+8. xdotool
+9. wmctrl
+10. glmark2* (Credit goes to [@CommandMC](https://github.com/CommandMC)) 
+11. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz))
 
 *These packages are maintained by me here to be able to control what they do and how they do it. Sources for them is in the repository.
 
@@ -75,6 +74,7 @@ Corporation`, you are running on the Nvidia GPU.
 - [x] Add more Wifi drivers
 - [x] ~~Look into viability of switching to the Minimal ISO style of Manjaro~~ Not viable, all packages not included are ones needed anyways.
 - [ ] Look into adding this Vulkan ray tracing benchmark as a loop, after finding a way to only having it run with RTX 20/30 series GPUs: https://github.com/GPSnoopy/RayTracingInVulkan 
+- [ ] Kernel Panic monitoring, thinking of having a widget using something [like this](https://apps.kde.org/knotes/) to have it output if a kernel panic is detected there. Something like `cat /proc/kmsg` should be sufficient. 
 
 ## Reproducability
 
