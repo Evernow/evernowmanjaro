@@ -26,7 +26,7 @@ Main benefits to this is that a user will not need to interact with the command 
 6. Nvidia LTS drivers for the 390 series. 
 7. Discord
 8. Nvidia Optimus packages 
-
+9. xdotool
 
 ### Removed
 This is removed as an effort to reduce the size of the ISO.
