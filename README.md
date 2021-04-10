@@ -10,8 +10,7 @@ Main benefits to this is that a user will not need to interact with the command 
 
 ## Drawbacks
 
-1. This ISO is much bigger than the original, size is yet to be detemrined.
-2. This ISO is not an easy maintainance task, and adds additional hurdles, due to this all modifications will be minimal, no changes to how Manjaro behaves will be made.
+1. This ISO is not an easy maintainance task, and adds additional hurdles, due to this all modifications will be minimal, no changes to how Manjaro behaves will be made.
 
 
 ## Modifications
