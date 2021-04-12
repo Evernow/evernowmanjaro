@@ -57,6 +57,7 @@ This is removed as an effort to reduce the size of the ISO.
 10. TimeShift
 11. Java
 12. DVD/CD reading/burning packages.
+13. Manjaro Hello
 
 ## Optimus notes
 
