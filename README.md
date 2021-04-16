@@ -1,5 +1,7 @@
 # Custom Manjaro ISO for troubleshooting hardware issues
 
+![](importantdance.gif)
+
 ## Goal
 
 This custom build Manjaro ISO aims to be make it easier for a user to be able to determine if an issue is hardware or software based by making it as simple as possible to test it in Manjaro.
