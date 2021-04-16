@@ -41,8 +41,15 @@ Main benefits to this is that a user will not need to interact with the command 
 9. wmctrl
 10. glmark2* (Credit goes to [@CommandMC](https://github.com/CommandMC)) 
 11. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz))
+12. python-getdevinfo*
+13. ddrescue
+14. ddrescue-gui*
+15. gsmartcontrol
+16. testdisk
+17. memtest86**
 
 *These packages are maintained by me here to be able to control what they do and how they do it. Sources for them is in the repository.
+** Doesn't work yet
 
 ### Removed
 This is removed as an effort to reduce the size of the ISO.
@@ -60,6 +67,8 @@ This is removed as an effort to reduce the size of the ISO.
 11. Java
 12. DVD/CD reading/burning packages.
 13. Manjaro Hello
+14. Cantana
+15. Flatpak utilities
 
 ## Optimus notes
 
