@@ -47,6 +47,7 @@ Main benefits to this is that a user will not need to interact with the command 
 15. gsmartcontrol
 16. testdisk / photorec
 17. memtest86**
+18. PSensor
 
 *These packages are maintained by me here to be able to control what they do and how they do it. Sources for them is in the repository.
 
