@@ -89,6 +89,13 @@ Corporation`, you are running on the Nvidia GPU.
 - [x] ~~Look into viability of switching to the Minimal ISO style of Manjaro~~ Not viable, all packages not included are ones needed anyways.
 - [ ] Look into adding this Vulkan ray tracing benchmark as a loop, after finding a way to only having it run with RTX 20/30 series GPUs: https://github.com/GPSnoopy/RayTracingInVulkan 
 - [ ] Kernel Panic monitoring, thinking of having a widget using something [like this](https://apps.kde.org/knotes/) to have it output if a kernel panic is detected there. Something like `cat /proc/kmsg` should be sufficient. 
+- [ ] Add [SysTester](https://aur.archlinux.org/packages/Systester/)
+- [ ] Add the [Intel Processor Diagnostic Tool](https://wiki.archlinux.org/index.php/Stress_testing#Intel_Processor_Diagnostic_Tool)
+- [ ] Figure out why the hell Memtest86 doesn't show up in grub
+- [ ] Add [vlmark](https://aur.archlinux.org/packages/vkmark-git/)
+- [ ] Look into feasability of adding [basemark](https://aur.archlinux.org/packages/basemark/)
+- [ ] Look into feasability of adding [GFXBench](https://aur.archlinux.org/packages/gfxbench/)
+
 
 ## Reproducability
 
