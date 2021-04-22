@@ -95,6 +95,7 @@ Corporation`, you are running on the Nvidia GPU.
 - [ ] Add [vlmark](https://aur.archlinux.org/packages/vkmark-git/)
 - [ ] Look into feasability of adding [basemark](https://aur.archlinux.org/packages/basemark/)
 - [ ] Look into feasability of adding [GFXBench](https://aur.archlinux.org/packages/gfxbench/)
+- [ ] Add the manjaro-log-helper
 
 
 ## Reproducability
