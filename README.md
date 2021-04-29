@@ -80,6 +80,30 @@ You can run `glxinfo | grep "server glx vendor string"`. If you see
 `SGI`, you are running on the Intel GPU. If you see `NVIDIA 
 Corporation`, you are running on the Nvidia GPU.
 
+## Wi-Fi notes
+
+In theory the drivers needed to get the following Wi-Fi cards has been added:
+
+NOTE: NONE OF THESE HAS BEEN CONFIRMED TO WORK! IF YOU SEE THAT YOUR WI-FI CARD WORKS, PLEASE INFORM ME TO ADD IT TO THE KNOWN WORKING LIST!
+
+1. Broadcom BCM4311
+2. Broadcom BCM4312
+3. Broadcom BCM4313 
+4. Broadcom BCM4321
+5. Broadcom BCM4322 
+6. Broadcom BCM43224
+7. Broadcom BCM43225
+8. Broadcom BCM43227 
+9. Broadcom BCM43228 (PCI ID 14e4:4359)
+10. Broadcom BCM43142 (PCI ID 14e4:4365) 
+11. Broadcom BCM4331 (PCI ID 14e4:4331) 
+12. Broadcom BCM4352 (PCI ID 14e4:43b1) 
+13. Broadcom BCM4360 (PCI IDs 14e4:43a0, 14e4:4360) 
+14. RTL8812BU
+15. RTL8822BU
+16. rtl8822bu
+17. rtl8821ce
+18. rtl8821cu
 ## To do list
 
 - [x] Add .desktop files on the desktop to make it easier for a person to initiate stress tests
