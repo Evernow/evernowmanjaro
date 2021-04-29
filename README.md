@@ -104,6 +104,11 @@ NOTE: NONE OF THESE HAS BEEN CONFIRMED TO WORK! IF YOU SEE THAT YOUR WI-FI CARD 
 16. rtl8822bu
 17. rtl8821ce
 18. rtl8821cu
+
+
+Of course this list doesn't include cards [that are already natively supported by Manjaro](https://wireless.wiki.kernel.org/en/users/drivers) 
+
+
 ## To do list
 
 - [x] Add .desktop files on the desktop to make it easier for a person to initiate stress tests
