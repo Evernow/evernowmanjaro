@@ -110,6 +110,16 @@ Notably, Broadcom cards may need additional packages we do not provide.
 
 Of course this list doesn't include cards [that are already natively supported by Manjaro](https://wireless.wiki.kernel.org/en/users/drivers) 
 
+The following Wi-Fi cards have been bought by me to confirm if they work:
+
+1. RTL8723BE
+2. RTL8192EU
+3. RTL8822BE
+4. RTL8821CE
+5. RT3573
+6. RTL8811AU
+
+I will confirm if they work as they arrive.
 
 ## To do list
 
