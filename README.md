@@ -86,14 +86,14 @@ In theory the drivers needed to get the following Wi-Fi cards has been added:
 
 NOTE: NONE OF THESE HAS BEEN CONFIRMED TO WORK! IF YOU SEE THAT YOUR WI-FI CARD WORKS, PLEASE INFORM ME TO ADD IT TO THE KNOWN WORKING LIST!
 
-1. Broadcom BCM4311
-2. Broadcom BCM4312
-3. Broadcom BCM4313 
-4. Broadcom BCM4321
-5. Broadcom BCM4322 
-6. Broadcom BCM43224
-7. Broadcom BCM43225
-8. Broadcom BCM43227 
+1. Broadcom BCM4311 (PCI IDs 14e4:4311, 14e4:4312) 
+2. Broadcom BCM4312 (PCI ID 14e4:4315) 
+3. Broadcom BCM4313  (PCI ID 14e4:4727) 
+4. Broadcom BCM4321 (PCI IDs 14e4:4328, 14e4:4329, 14e4:432a) 
+5. Broadcom BCM4322 (PCI IDs 14e4:432b, 14e4:432c, 14e4:432d) 
+6. Broadcom BCM43224 (PCI IDs 14e4:0576, 14e4:4353) 
+7. Broadcom BCM43225 (PCI ID 14e4:4357) 
+8. Broadcom BCM43227  (PCI ID 14e4:4358) 
 9. Broadcom BCM43228 (PCI ID 14e4:4359)
 10. Broadcom BCM43142 (PCI ID 14e4:4365) 
 11. Broadcom BCM4331 (PCI ID 14e4:4331) 
