@@ -84,7 +84,9 @@ Corporation`, you are running on the Nvidia GPU.
 
 In theory the drivers needed to get the following Wi-Fi cards has been added:
 
-NOTE: NONE OF THESE HAS BEEN CONFIRMED TO WORK! IF YOU SEE THAT YOUR WI-FI CARD WORKS, PLEASE INFORM ME TO ADD IT TO THE KNOWN WORKING LIST!
+NOTE: NONE OF THESE HAS BEEN CONFIRMED TO WORK! IF YOU SEE THAT YOUR WI-FI CARD WORKS, PLEASE INFORM ME TO ADD IT TO THE KNOWN WORKING LIST!.
+
+Notably, Broadcom cards may need additional packages we do not provide. 
 
 1. Broadcom BCM4311 (PCI IDs 14e4:4311, 14e4:4312) 
 2. Broadcom BCM4312 (PCI ID 14e4:4315) 
