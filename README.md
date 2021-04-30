@@ -39,15 +39,14 @@ Main benefits to this is that a user will not need to interact with the command 
 7. Nvidia Optimus packages 
 8. xdotool
 9. wmctrl
-10. glmark2* (Credit goes to [@CommandMC](https://github.com/CommandMC)) 
-11. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz))
-12. python-getdevinfo*
-13. ddrescue
-14. ddrescue-gui*
-15. gsmartcontrol
-16. testdisk / photorec
-17. memtest86**
-18. PSensor
+10. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz))
+11. python-getdevinfo*
+12. ddrescue
+13. ddrescue-gui*
+14. gsmartcontrol
+15. testdisk / photorec
+16. memtest86**
+17. PSensor
 
 *These packages are maintained by me here to be able to control what they do and how they do it. Sources for them is in the repository.
 
@@ -133,7 +132,6 @@ I will confirm if they work as they arrive.
 - [ ] Add [SysTester](https://aur.archlinux.org/packages/Systester/)
 - [ ] Add the [Intel Processor Diagnostic Tool](https://wiki.archlinux.org/index.php/Stress_testing#Intel_Processor_Diagnostic_Tool)
 - [ ] Figure out why the hell Memtest86 doesn't show up in grub
-- [ ] Add [vlmark](https://aur.archlinux.org/packages/vkmark-git/)
 - [ ] Look into feasability of adding [basemark](https://aur.archlinux.org/packages/basemark/)
 - [ ] Look into feasability of adding [GFXBench](https://aur.archlinux.org/packages/gfxbench/)
 - [ ] Add the manjaro-log-helper
