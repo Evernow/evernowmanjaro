@@ -111,12 +111,14 @@ Of course this list doesn't include cards [that are already natively supported b
 
 The following Wi-Fi cards have been bought by me to confirm if they work:
 
-1. RTL8723BE
-2. RTL8192EU
-3. RTL8822BE
-4. RTL8821CE
-5. RT3573
-6. RTL8811AU
+1. RTL8723BE (PCI)
+2. RTL8192EU (USB)
+3. RTL8822BE (PCI)
+4. RTL8821CE (PCI)
+5. RT3573 (USB)
+6. RTL8821AU (USB) 
+7. RTL8812AU (USB)
+8. RTL8811AU (USB)
 
 I will confirm if they work as they arrive.
 
