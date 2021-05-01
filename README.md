@@ -118,7 +118,6 @@ The following Wi-Fi cards have been bought by me to confirm if they work:
 5. RT3573 (USB)
 6. RTL8821AU (USB) 
 7. RTL8812AU (USB)
-8. RTL8811AU (USB)
 
 I will confirm if they work as they arrive.
 
