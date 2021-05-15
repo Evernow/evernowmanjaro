@@ -136,6 +136,9 @@ I will confirm if they work as they arrive.
 - [ ] Look into feasability of adding [basemark](https://aur.archlinux.org/packages/basemark/)
 - [ ] Look into feasability of adding [GFXBench](https://aur.archlinux.org/packages/gfxbench/)
 - [ ] Add the manjaro-log-helper
+- [ ] Add kdiskmark
+
+
 
 
 ## Reproducability
