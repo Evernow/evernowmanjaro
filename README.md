@@ -137,6 +137,8 @@ I will confirm if they work as they arrive.
 - [ ] Look into feasability of adding [GFXBench](https://aur.archlinux.org/packages/gfxbench/)
 - [ ] Add the manjaro-log-helper
 - [ ] Add kdiskmark
+- [ ] Add [CPU-X](https://github.com/X0rg/CPU-X)
+- [ ] Add [CPU-G](https://github.com/atareao/cpu-g)
 
 
 
