@@ -141,6 +141,9 @@ I will confirm if they work as they arrive.
 - [ ] Add [CPU-G](https://github.com/atareao/cpu-g)
 - [ ] Add [the Paragon NTFS drivers](https://aur.archlinux.org/packages/ntfs3-dkms/)
 - [ ] Remove NTFS3G (requirement for Paragon drivers, don't want people using NTFS3G tbh)
+- [ ] Add net-tools and ethtool
+- [ ] Remove sleep
+
 
 
 
