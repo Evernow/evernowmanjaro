@@ -32,25 +32,19 @@ Main benefits to this is that a user will not need to interact with the command 
 
 1. Unigine-Valley*
 2. Furmark*
-3. GPU Monitoring tools (GWE* for Nvidia, RadeonTop for AMD)
+3. GPU Monitoring tools (GWE^ for Nvidia, RadeonTop for AMD)
 4. Prime95*
-5. Nvidia LTS drivers for the 390 series. 
-6. Discord
-7. Nvidia Optimus packages 
-8. xdotool
-9. wmctrl
-10. rtl88x2bu-dkms-git*, rtl8822bu-dkms-git*, rtl8821ce-dkms-git*, rtl8821cu-dkms-git*, broadcom-wl-dkms (credit goes to [@RandoNandoz](https://github.com/RandoNandoz))
-11. python-getdevinfo*
-12. ddrescue
-13. ddrescue-gui*
-14. gsmartcontrol
-15. testdisk / photorec
-16. memtest86**
-17. PSensor
+5. Discord
+6. python-getdevinfo*
+7. ddrescue
+8. ddrescue-gui*
+9. gsmartcontrol
+10. testdisk / photorec
+11. PSensor
 
 *These packages are maintained by me here to be able to control what they do and how they do it. Sources for them is in the repository.
+^ In Chaotic-AUR
 
-** Doesn't work yet
 
 ### Removed
 This is removed as an effort to reduce the size of the ISO.
@@ -73,61 +67,18 @@ This is removed as an effort to reduce the size of the ISO.
 
 ## Optimus notes
 
-I do not have an Optimus laptop to test this with. 
-
-You can run `glxinfo | grep "server glx vendor string"`. If you see 
-`SGI`, you are running on the Intel GPU. If you see `NVIDIA 
-Corporation`, you are running on the Nvidia GPU.
+Optimus laptops will not work here. Fuck gaming laptops.
 
 ## Wi-Fi notes
 
-In theory the drivers needed to get the following Wi-Fi cards has been added:
 
-NOTE: NONE OF THESE HAS BEEN CONFIRMED TO WORK! IF YOU SEE THAT YOUR WI-FI CARD WORKS, PLEASE INFORM ME TO ADD IT TO THE KNOWN WORKING LIST!.
+I have given up trying to get Realtek cards working under here, only ones [that are natively supported by Manjaro](https://wireless.wiki.kernel.org/en/users/drivers) will work.
 
-Notably, Broadcom cards may need additional packages we do not provide. 
-
-1. Broadcom BCM4311 (PCI IDs 14e4:4311, 14e4:4312) 
-2. Broadcom BCM4312 (PCI ID 14e4:4315) 
-3. Broadcom BCM4313  (PCI ID 14e4:4727) 
-4. Broadcom BCM4321 (PCI IDs 14e4:4328, 14e4:4329, 14e4:432a) 
-5. Broadcom BCM4322 (PCI IDs 14e4:432b, 14e4:432c, 14e4:432d) 
-6. Broadcom BCM43224 (PCI IDs 14e4:0576, 14e4:4353) 
-7. Broadcom BCM43225 (PCI ID 14e4:4357) 
-8. Broadcom BCM43227  (PCI ID 14e4:4358) 
-9. Broadcom BCM43228 (PCI ID 14e4:4359)
-10. Broadcom BCM43142 (PCI ID 14e4:4365) 
-11. Broadcom BCM4331 (PCI ID 14e4:4331) 
-12. Broadcom BCM4352 (PCI ID 14e4:43b1) 
-13. Broadcom BCM4360 (PCI IDs 14e4:43a0, 14e4:4360) 
-14. RTL8812BU
-15. RTL8822BU
-16. rtl8822bu
-17. rtl8821ce
-18. rtl8821cu
-
-
-Of course this list doesn't include cards [that are already natively supported by Manjaro](https://wireless.wiki.kernel.org/en/users/drivers) 
-
-The following Wi-Fi cards have been bought by me to confirm if they work:
-
-1. RTL8723BE (PCI)
-2. RTL8192EU (USB)
-3. RTL8822BE (PCI)
-4. RTL8821CE (PCI)
-5. RT3573 (USB)
-6. RTL8821AU (USB) 
-7. RTL8812AU (USB)
-
-I will confirm if they work as they arrive.
 
 ## To do list
 
-- [x] Add .desktop files on the desktop to make it easier for a person to initiate stress tests
 - [ ] Find a way to add the Phoronix Test Suite (main issue is for offline use, and the fact we can't have this image be bigger than 4gb due to ram limitations)
 - [ ] Find an additional good GPU stress test 
-- [x] Add more Wifi drivers
-- [x] ~~Look into viability of switching to the Minimal ISO style of Manjaro~~ Not viable, all packages not included are ones needed anyways.
 - [ ] Look into adding this Vulkan ray tracing benchmark as a loop, after finding a way to only having it run with RTX 20/30 series GPUs: https://github.com/GPSnoopy/RayTracingInVulkan 
 - [ ] Kernel Panic monitoring, thinking of having a widget using something [like this](https://apps.kde.org/knotes/) to have it output if a kernel panic is detected there. Something like `cat /proc/kmsg` should be sufficient. 
 - [ ] Add [SysTester](https://aur.archlinux.org/packages/Systester/)
@@ -136,16 +87,10 @@ I will confirm if they work as they arrive.
 - [ ] Look into feasability of adding [basemark](https://aur.archlinux.org/packages/basemark/)
 - [ ] Look into feasability of adding [GFXBench](https://aur.archlinux.org/packages/gfxbench/)
 - [ ] Add the manjaro-log-helper
-- [ ] Add kdiskmark
 - [ ] Add [CPU-X](https://github.com/X0rg/CPU-X)
 - [ ] Add [CPU-G](https://github.com/atareao/cpu-g)
-- [ ] Add [the Paragon NTFS drivers](https://aur.archlinux.org/packages/ntfs3-dkms/)
-- [ ] Remove NTFS3G (requirement for Paragon drivers, don't want people using NTFS3G tbh)
 - [ ] Add net-tools and ethtool
 - [ ] Remove sleep
-
-
-
 
 
 ## Reproducability
