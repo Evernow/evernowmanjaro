@@ -9,8 +9,8 @@ This custom build Manjaro ISO aims to be make it easier for a user to be able to
 ## Requirements
 
 * A 64-bit CPU
-* 4 GB of ram
-* A 4 GB USB stick
+* 8 GB of ram
+* A 8 GB USB stick
 * A working internet connection to download the ISO and etcher. Internet connection is not required afterwards
 
 ## Usage
