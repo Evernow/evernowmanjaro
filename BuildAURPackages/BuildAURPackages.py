@@ -14,11 +14,14 @@ packages_to_add = {
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
 
 def buildAURPackages(AURPACKAGES):
+    print(AURPACKAGES)
     subprocess.run('sudo pacman -S makepkg --noconfirm',shell=True)
     subprocess.run('mkdir online-repo',shell=True)
     subprocess.run('mkdir online-repo/x86_64',shell=True)
     os.makedirs('/AURPackagesToRepo')
     for package in AURPACKAGES:
+        print("Handling this in AUR loop")
+        print( package)
         subprocess.run('git clone https://aur.archlinux.org/{package}.git'.format(package=package),shell=True)
         subprocess.run('chmod 777 /{package}'.format(package=package),shell=True)
         subprocess.run('sudo -u nobody makepkg -i --skipinteg --skipchecksums --skippgpcheck',shell=True,cwd='/{package}'.format(package=package))
@@ -44,6 +47,11 @@ for package in packages_to_add:
         AURPACKAGES.append(package)
     else:
         repopackages.append(package)
+print(" Packages")
+print(AURPACKAGES)
+print("AUR Packages")
+print(repopackages)
+
 for package in repopackages:
     subprocess.run('pacman -S {package} --noconfirm'.format(package=package),shell=True)
 buildAURPackages(AURPACKAGES)
