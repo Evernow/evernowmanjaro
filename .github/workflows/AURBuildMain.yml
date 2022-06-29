@@ -19,7 +19,7 @@ jobs:
           
       - name: Hello world action step
         id: hello
-        uses: BuildAURPackages/action@v1
+        uses: actions/BuildAURPackages@v1
         with:
           who-to-greet: 'Mona the Octocat'    
       - name: commit files
