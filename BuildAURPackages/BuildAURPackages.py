@@ -21,7 +21,7 @@ def buildAURPackages(AURPACKAGES):
     for package in AURPACKAGES:
         subprocess.run('git clone https://aur.archlinux.org/{package}.git'.format(package=package),shell=True)
         subprocess.run('chmod 777 /{package}'.format(package=package),shell=True)
-        subprocess.run('sudo -u nobody makepkg --skipinteg --skipchecksums --skippgpcheck',shell=True,cwd='/{package}'.format(package=package))
+        subprocess.run('sudo -u nobody makepkg -i --skipinteg --skipchecksums --skippgpcheck',shell=True,cwd='/{package}'.format(package=package))
         shutil.copy(glob.glob('/{package}/*.zst')[0].format(package=package), '/AURPackagesToRepo{nameofbuild}'.format(nameofbuild=glob.glob('/{package}/*.zst'.format(package=package))[0][glob.glob('/{package}/*.zst'.format(package=package))[0].rfind('/'):]))
     allfiles = os.listdir('/AURPackagesToRepo')
   
@@ -33,7 +33,7 @@ def buildAURPackages(AURPACKAGES):
 subprocess.run('sudo pacman -Syyu --noconfirm',shell=True)
 
 subprocess.run('pacman -S manjaro-tools-iso manjaro-tools-base manjaro-tools-pkg git --noconfirm',shell=True)
-
+subprocess.run('mkdir iso-profiles',shell=True)
 subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-profiles.git iso-profiles', shell=True)
 
 
