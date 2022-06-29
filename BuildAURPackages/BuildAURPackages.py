@@ -25,7 +25,10 @@ def buildAURPackages(AURPACKAGES):
         subprocess.run('git clone https://aur.archlinux.org/{package}.git'.format(package=package),shell=True)
         subprocess.run('chmod 777 /{package}'.format(package=package),shell=True)
         subprocess.run('sudo -u nobody ls',shell=True,cwd='/{package}'.format(package=package))
-        subprocess.run('sudo -u nobody makepkg -i --skipinteg --skipchecksums --skippgpcheck',shell=True,cwd='/{package}'.format(package=package))
+        subprocess.run('sudo -u nobody makepkg --skipinteg --skipchecksums --skippgpcheck',shell=True,cwd='/{package}'.format(package=package))
+        subprocess.run('pacman -S {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst')[0].format(package=package),shell=True))
+        print('Command that is maybe failing here')
+        print('pacman -S {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst')[0].format(package=package)))
         shutil.copy(glob.glob('/{package}/*.zst')[0].format(package=package), '/AURPackagesToRepo{nameofbuild}'.format(nameofbuild=glob.glob('/{package}/*.zst'.format(package=package))[0][glob.glob('/{package}/*.zst'.format(package=package))[0].rfind('/'):]))
     allfiles = os.listdir('/AURPackagesToRepo')
   
