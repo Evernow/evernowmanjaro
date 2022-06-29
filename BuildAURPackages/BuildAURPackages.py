@@ -26,10 +26,10 @@ def buildAURPackages(AURPACKAGES):
         subprocess.run('chmod 777 /{package}'.format(package=package),shell=True)
         subprocess.run('sudo -u nobody ls',shell=True,cwd='/{package}'.format(package=package))
         subprocess.run('sudo -u nobody makepkg --skipinteg --skipchecksums --skippgpcheck',shell=True,cwd='/{package}'.format(package=package))
-        subprocess.run('pacman -S {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst')[0].format(package=package),shell=True))
+        subprocess.run('pacman -S {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst'.format(package=package))[0],shell=True))
         print('Command that is maybe failing here')
-        print('pacman -S {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst')[0].format(package=package)))
-        shutil.copy(glob.glob('/{package}/*.zst')[0].format(package=package), '/AURPackagesToRepo{nameofbuild}'.format(nameofbuild=glob.glob('/{package}/*.zst'.format(package=package))[0][glob.glob('/{package}/*.zst'.format(package=package))[0].rfind('/'):]))
+        print('pacman -S {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst'.format(package=package))[0]))
+        shutil.copy(glob.glob('/{package}/*.zst'.format(package=package))[0], '/AURPackagesToRepo{nameofbuild}'.format(nameofbuild=glob.glob('/{package}/*.zst'.format(package=package))[0][glob.glob('/{package}/*.zst'.format(package=package))[0].rfind('/'):]))
     allfiles = os.listdir('/AURPackagesToRepo')
   
     for f in allfiles:
