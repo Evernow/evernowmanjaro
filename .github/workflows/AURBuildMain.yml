@@ -1,4 +1,4 @@
-name: AURBuilding
+name: AURBuildMain
 
 on:     
   workflow_dispatch:
