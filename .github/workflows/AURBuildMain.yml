@@ -30,6 +30,7 @@ jobs:
         run: |
           docker create --name=new_container -it manjarolinux/base:latest
           docker start new_container
+          docker cp BuildAURPackages.py new_container:/
           docker exec new_container python BuildAURPackages.py
       - name: commit files
         run: |
