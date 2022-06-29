@@ -22,7 +22,6 @@ jobs:
         uses: BuildAURPackages/action@v1
         with:
           who-to-greet: 'Mona the Octocat'    
-      - name: execute py script # run sj-gobierno.py to get the latest data
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
