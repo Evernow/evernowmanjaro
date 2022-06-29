@@ -1,6 +1,6 @@
 name: AURBuildMain
 
-on:     
+on:
   workflow_dispatch:
     inputs:
       logLevel:
@@ -8,7 +8,7 @@ on:
         required: true
         default: 'warning'
       tags:
-        description: 'Test scenario tags' 
+        description: 'Test scenario tags'  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,18 +16,27 @@ jobs:
 
       - name: checkout repo content
         uses: actions/checkout@v3 # checkout the repository content to github runner
-          
-      - name: Hello world action step
-        id: hello
-        uses: evernowmanjaro/BuildAURPackages/action@v1
+
+      - name: setup python
+        uses: actions/setup-python@v3
         with:
-          who-to-greet: 'Mona the Octocat'    
+          python-version: '3.9'
+          
+      - name: Pull Manjaro Docker
+        run: |
+          docker pull manjarolinux/base
+
+      - name: Run Python inside docker
+        run: |
+          docker create --name=new_container -it manjarolinux/base:latest
+          docker start new_container
+          docker exec new_container python BuildAURPackages.py
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || git commit -m 'Chika updates AUR Repo'
+          git diff-index --quiet HEAD || git commit -m 'Chika updates AUR packages'
           
       - name: push changes
         uses: ad-m/github-push-action@v0.6.0
