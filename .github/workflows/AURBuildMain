@@ -1,0 +1,37 @@
+name: AURBuilding
+
+on:     
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+          
+      - name: Hello world action step
+        id: hello
+        uses: BuildAURPackages/action@v1
+        with:
+          who-to-greet: 'Mona the Octocat'    
+      - name: execute py script # run sj-gobierno.py to get the latest data
+      - name: commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m 'Chika updates AUR Repo'
+          
+      - name: push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main  
