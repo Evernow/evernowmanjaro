@@ -13,11 +13,11 @@ packages_to_add = {
                     'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
 
-                    'python-injector': ['AUR', None], # Dependency of gwe
-                    'python-py3nvml': ['AUR', None], # Dependency of gwe
-                    'python-getdevinfo': ['AUR', None], # Dependency of gwe
+                #    'python-injector': ['AUR', None], # Dependency of gwe
+                #    'python-py3nvml': ['AUR', None], # Dependency of gwe
+                #    'python-getdevinfo': ['AUR', None], # Dependency of gwe
 
-                    'gwe': ['AUR', None],
+                #    'gwe': ['AUR', None],
                     'corectl': ['AUR', None],
                    # 'raytracinginvulkan-git': ['AUR', None],
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
