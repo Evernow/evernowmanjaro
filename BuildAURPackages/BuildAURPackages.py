@@ -31,7 +31,7 @@ def buildAURPackages(AURPACKAGES):
     allfiles = os.listdir('/AURPackagesToRepo')
   
     for f in allfiles:
-        shutil.move('/AURPackagesToRepo' + f, 'online-repo/x86_64' + f)
+        shutil.move('/AURPackagesToRepo/' + f, 'online-repo/x86_64' + f)
     subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',cwd='/{repoaddress}'.format(repoaddress='online-repo/x86_64'))
 
 
