@@ -10,7 +10,7 @@ packages_to_add = {
                     'python-beautifulsoup4' : ['extra', None], # Dependency of ddrescue-gui
                     'parted' : ['extra', None], # Dependency of ddrescue-gui
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
-                    'python-wxpython': ['AUR', None], # Dependency of ddrescue-gui
+                    'python-wxpython': ['community', None], # Dependency of ddrescue-gui
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
 
 def buildAURPackages(AURPACKAGES):
