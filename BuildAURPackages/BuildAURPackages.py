@@ -36,6 +36,11 @@ def buildAURPackages(AURPACKAGES):
     subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',cwd='/{repoaddress}'.format(repoaddress='online-repo/x86_64'))
 
 
+# Enable mulilib, easier to add the lines than uncomment them
+pacmanconf = open('/etc/pacman.conf', 'a')
+pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
+pacmanconf.close()
+
 subprocess.run('sudo pacman -Syyu --noconfirm',shell=True)
 
 subprocess.run('pacman -S manjaro-tools-iso manjaro-tools-base manjaro-tools-pkg git --noconfirm',shell=True)
