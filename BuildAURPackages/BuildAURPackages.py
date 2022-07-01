@@ -128,3 +128,5 @@ print(repopackages)
 for package in repopackages:
     subprocess.run('pacman -S {package} --noconfirm'.format(package=package),shell=True)
 buildAURPackages(AURPACKAGES)
+
+print(os.listdir('online-repo/x86_64'))
