@@ -15,8 +15,8 @@ packages_to_add = {
 
 def buildAURPackages(AURPACKAGES):
     print(AURPACKAGES)
-    subprocess.run('mkdir online-repo',shell=True)
-    subprocess.run('mkdir online-repo/x86_64',shell=True)
+    subprocess.run('mkdir /online-repo',shell=True)
+    subprocess.run('mkdir /online-repo/x86_64',shell=True)
     os.makedirs('/AURPackagesToRepo')
     for package in AURPACKAGES:
         print("Handling this in AUR loop")
@@ -31,8 +31,8 @@ def buildAURPackages(AURPACKAGES):
     allfiles = os.listdir('/AURPackagesToRepo')
   
     for f in allfiles:
-        shutil.move('/AURPackagesToRepo/' + f, 'online-repo/x86_64' + f)
-    subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',shell=True,cwd='/{repoaddress}'.format(repoaddress='online-repo/x86_64'))
+        shutil.move('/AURPackagesToRepo/' + f, '/online-repo/x86_64' + f)
+    subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',shell=True,cwd='/{repoaddress}'.format(repoaddress='/online-repo/x86_64'))
 
 
 def unbullshitifymakepkg():
@@ -129,4 +129,4 @@ for package in repopackages:
     subprocess.run('pacman -S {package} --noconfirm'.format(package=package),shell=True)
 buildAURPackages(AURPACKAGES)
 
-print(os.listdir('online-repo/x86_64'))
+print(os.listdir('/online-repo/x86_64'))
