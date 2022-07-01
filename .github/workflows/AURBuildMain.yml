@@ -32,8 +32,8 @@ jobs:
           docker start new_container
           docker cp BuildAURPackages/BuildAURPackages.py new_container:/
           docker exec new_container python BuildAURPackages.py
-          sudo chmod -R a+rwX /online-repo
-          docker cp new_container:/online-repo /online-repo
+          sudo chmod -R a+rwX online-repo
+          docker cp new_container:/online-repo online-repo
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
