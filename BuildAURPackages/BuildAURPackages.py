@@ -12,9 +12,14 @@ packages_to_add = {
                     'gputest': ['AUR', None],
                     'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
+
+                    'python-injector': ['AUR', None], # Dependency of gwe
+                    'python-py3nvml': ['AUR', None], # Dependency of gwe
+                    'python-getdevinfo': ['AUR', None], # Dependency of gwe
+
                     'gwe': ['AUR', None],
                     'corectl': ['AUR', None],
-                    'raytracinginvulkan-git': ['AUR', None],
+                   # 'raytracinginvulkan-git': ['AUR', None],
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
 
