@@ -128,6 +128,9 @@ subprocess.run('mkdir /online-repo/x86_64',shell=True)
 subprocess.run('chmod 777 {directory}'.format(directory='/online-repo'),shell=True)
 subprocess.run('chmod 777 {directory}'.format(directory='/online-repo/x86_64'),shell=True)
 
+import time
+time.sleep(5)
+
 buildAURPackages(AURPACKAGES)
 
 print(os.listdir('/online-repo/x86_64'))
