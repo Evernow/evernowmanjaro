@@ -18,7 +18,7 @@ packages_to_add = {
                 #    'python-getdevinfo': ['AUR', None], # Dependency of gwe
 
                 #    'gwe': ['AUR', None],
-                    'corectl': ['AUR', None],
+                    'corectrl': ['AUR', None],
                    # 'raytracinginvulkan-git': ['AUR', None],
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
