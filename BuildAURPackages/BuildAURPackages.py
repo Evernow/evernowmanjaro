@@ -10,7 +10,9 @@ subprocess.run('exec 1>&2',shell=True) #https://stackoverflow.com/questions/5866
 packages_to_add = {
                     'mprime-bin': ['AUR', 'mprime'],
                     'gputest': ['AUR', None],
+                    'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
+                    'raytracinginvulkan-git': ['AUR', None],
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
 
