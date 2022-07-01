@@ -32,7 +32,7 @@ def buildAURPackages(AURPACKAGES):
   
     for f in allfiles:
         shutil.move('/AURPackagesToRepo/' + f, 'online-repo/x86_64' + f)
-    subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',cwd='/{repoaddress}'.format(repoaddress='online-repo/x86_64'))
+    subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',shell=True,cwd='/{repoaddress}'.format(repoaddress='online-repo/x86_64'))
 
 
 def unbullshitifymakepkg():
