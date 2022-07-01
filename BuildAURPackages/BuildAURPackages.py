@@ -17,12 +17,15 @@ def buildAURPackages(AURPACKAGES):
     print(AURPACKAGES)
     subprocess.run('mkdir /online-repo',shell=True)
     subprocess.run('mkdir /online-repo/x86_64',shell=True)
+    subprocess.run('chmod 777 /{directory}'.format(package='/online-repo'),shell=True)
+    subprocess.run('chmod 777 /{directory}'.format(package='/online-repo/x86_64'),shell=True)
     os.makedirs('/AURPackagesToRepo')
     for package in AURPACKAGES:
         print("Handling this in AUR loop")
         print( package)
         subprocess.run('git clone https://aur.archlinux.org/{package}.git'.format(package=package),shell=True)
-      #  subprocess.run('chmod 777 /{package}'.format(package=package),shell=True)
+      #  
+      # subprocess.run('chmod 777 /{package}'.format(package=package),shell=True)
       #  subprocess.run('sudo -u nobody ls',shell=True,cwd='/{package}'.format(package=package))
         subprocess.run('makepkg -si --syncdeps --cleanbuild  --noconfirm ',shell=True,cwd='/{package}'.format(package=package))
       #  subprocess.run('pacman -U {package} --noconfirm'.format(package=glob.glob('/{package}/*.zst'.format(package=package))[0]),shell=True)
