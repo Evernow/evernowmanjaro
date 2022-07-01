@@ -11,12 +11,7 @@ packages_to_add = {
                     'mprime-bin': ['AUR', 'mprime'],
                     'gputest': ['AUR', None],
                     'nvflash': ['AUR', None],
-                    'ddrescue' : ['extra', None], # Dependency of ddrescue-gui
-                    'lshw' : ['extra', None], # Dependency of ddrescue-gui
-                    'python-beautifulsoup4' : ['extra', None], # Dependency of ddrescue-gui
-                    'parted' : ['extra', None], # Dependency of ddrescue-gui
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
-                    'python-wxpython': ['community', None], # Dependency of ddrescue-gui
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
 
 def buildAURPackages(AURPACKAGES):
