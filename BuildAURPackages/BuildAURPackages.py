@@ -15,10 +15,6 @@ packages_to_add = {
 
 def buildAURPackages(AURPACKAGES):
     print(AURPACKAGES)
-    subprocess.run('mkdir /online-repo',shell=True)
-    subprocess.run('mkdir /online-repo/x86_64',shell=True)
-    subprocess.run('chmod 777 /{directory}'.format(directory='/online-repo'),shell=True)
-    subprocess.run('chmod 777 /{directory}'.format(directory='/online-repo/x86_64'),shell=True)
     os.makedirs('/AURPackagesToRepo')
     for package in AURPACKAGES:
         print("Handling this in AUR loop")
@@ -110,9 +106,6 @@ pacmanconf.close()
 subprocess.run('sudo pacman -Syyu --noconfirm',shell=True)
 
 subprocess.run('pacman -S manjaro-tools-iso manjaro-tools-base manjaro-tools-pkg git --noconfirm',shell=True)
-subprocess.run('mkdir iso-profiles',shell=True)
-subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-profiles.git iso-profiles', shell=True)
-
 
 
 
@@ -130,6 +123,11 @@ print(repopackages)
 
 for package in repopackages:
     subprocess.run('pacman -S {package} --noconfirm'.format(package=package),shell=True)
+
+subprocess.run('mkdir /online-repo/x86_64',shell=True)
+subprocess.run('chmod 777 {directory}'.format(directory='/online-repo'),shell=True)
+subprocess.run('chmod 777 {directory}'.format(directory='/online-repo/x86_64'),shell=True)
+
 buildAURPackages(AURPACKAGES)
 
 print(os.listdir('/online-repo/x86_64'))
