@@ -1,6 +1,12 @@
 import subprocess,shutil,glob,os
 
 # {'Package name': ['Package location if AUR, if not then doesn't matter', 'command to launch']}
+
+subprocess.run('exec 1>&2',shell=True) #https://stackoverflow.com/questions/58662065/docker-run-output-appears-out-of-order
+
+
+
+
 packages_to_add = {
                     'mprime-bin': ['AUR', 'mprime'],
                     'gputest': ['AUR', None],
