@@ -124,7 +124,7 @@ print(repopackages)
 for package in repopackages:
     subprocess.run('pacman -S {package} --noconfirm'.format(package=package),shell=True)
 
-subprocess.run('mkdir -p /online-repo/x86_64',shell=True)
+os.makedirs('/online-repo/x86_64')
 subprocess.run('chmod 777 {directory}'.format(directory='/online-repo'),shell=True)
 subprocess.run('chmod 777 {directory}'.format(directory='/online-repo/x86_64'),shell=True)
 
