@@ -13,11 +13,11 @@ packages_to_add = {
                     'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
 
-                   'python-injector': ['AUR', None], # Dependency of gwe
-                   'python-py3nvml': ['AUR', None], # Dependency of gwe
+                #    'python-injector': ['AUR', None], # Dependency of gwe
+                #    'python-py3nvml': ['AUR', None], # Dependency of gwe
 
-                   'gwe': ['AUR', None],
-                    'corectrl': ['AUR', None],
+                   'gwe': ['Chaotic AUR', None],
+                    'corectrl': ['Chaotic AUR', None],
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
                     'ddrescue-gui' : ['AUR','python3 /usr/share/ddrescue-gui/DDRescue_GUI.py']}
 
@@ -40,6 +40,22 @@ def buildAURPackages(AURPACKAGES):
     for f in allfiles:
         shutil.move('/AURPackagesToRepo/' + f, '/online-repo/x86_64/' + f)
     subprocess.run('repo-add online-repo.db.tar.gz *.pkg.tar.*',shell=True,cwd='/{repoaddress}'.format(repoaddress='/online-repo/x86_64'))
+
+
+def HandleAURdependenciesFromAUR(package):
+    # Handles AUR packages which themselves depend on AUR packages, we need to build those too since makepkg won't grab those.
+
+    # WIP, not currently finished since the need isn't there yet.
+    subprocess.run('pacman -Slq community > communityrepo.txt',shell=True)
+    subprocess.run('pacman -Slq extra > extrarepo.txt',shell=True)
+    subprocess.run('pacman -Slq core > corerepo.txt',shell=True)
+    subprocess.run('pacman -Slq multilib > multilibrepo.txt',shell=True)
+    allpackages = [line.rstrip() for line in open('communityrepo.txt')] + [line.rstrip() for line in open('extrarepo.txt')] + [line.rstrip() for line in open('corerepo.txt')] + [line.rstrip() for line in open('multilibrepo.txt')] 
+
+    os.makedirs('/throwaway')
+
+
+
 
 
 def unbullshitifymakepkg():
@@ -110,6 +126,21 @@ print('finished')
 pacmanconf = open('/etc/pacman.conf', 'a')
 pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
 pacmanconf.close()
+
+#Chaotic AUR has gwe and corectrl, two less packages to build is always a win
+subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com --noconfirm',shell=True)
+subprocess.run('pacman-key --lsign-key FBA220DFC880C036 --noconfirm',shell=True)
+subprocess.run("pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm",shell=True)
+subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com --noconfirm',shell=True)
+
+pacmanconf = open('/etc/pacman.conf', 'a')
+pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.close()
+
+
+
+
+
 
 subprocess.run('sudo pacman -Syyu --noconfirm',shell=True)
 
