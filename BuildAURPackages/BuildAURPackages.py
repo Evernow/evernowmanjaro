@@ -12,10 +12,6 @@ packages_to_add = {
                     'gputest': ['AUR', None],
                     'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
-
-                #    'python-injector': ['AUR', None], # Dependency of gwe
-                #    'python-py3nvml': ['AUR', None], # Dependency of gwe
-
                    'gwe': ['Chaotic AUR', None],
                     'corectrl': ['Chaotic AUR', None],
                     'python-getdevinfo': ['AUR', None], # Dependency of ddrescue-gui
