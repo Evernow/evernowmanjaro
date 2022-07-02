@@ -1,13 +1,12 @@
-{"LinuxKernel": "linux518", // Must follow Manjaro naming: https://gitlab.manjaro.org/packages/core
+{"LinuxKernel": "linux518", 
 "Grubdelay": "300", 
 "PackagesToInstall": { 
-// If a dependency is from the AUR it has to be placed here and before its corresponding package.
                     'android-tools': ['extra', None],
 					'testdisk': ['extra', None],
 					'broadcom-wl-dkms': ['community', None],
 					'gsmartcontrol': ['community', None],
 					'kdiskmark': ['community', None],
-					'libimobiledevice': ['community', None], // iOS Hotspots
+					'libimobiledevice': ['community', None], 
 					'psensor': ['community', None],
 					'discord': ['community', None],
 					'mprime-bin': ['AUR', None],
@@ -17,7 +16,7 @@
 					'minecraft-launcher': ['AUR', None],
                     'gwe': ['Chaotic AUR', None],
                     'corectrl': ['Chaotic AUR', None],
-                    'python-getdevinfo': ['AUR', None], // Dependency of ddrescue-gui
+                    'python-getdevinfo': ['AUR', None], 
                     'ddrescue-gui' : ['AUR',None]
 					}, 
 "PackagesToRemove": ['noto-fonts-cjk', 'snapd', 'snapd-glib', 'pamac-snap-plugin', 
