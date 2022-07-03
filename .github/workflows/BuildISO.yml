@@ -32,7 +32,7 @@ jobs:
           docker start new_container
           docker cp ISO-Components new_container:/
           docker cp BuildISO.py new_container:/
-          docker exec --privileged new_container python BuildISO.py
+          docker exec --user root --privileged new_container python BuildISO.py
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
