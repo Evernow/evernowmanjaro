@@ -62,5 +62,5 @@ Startup()
 subprocess.run('rm -r /usr/share/manjaro-tools/iso-profiles/',shell=True,check=True)
 subprocess.run('mv iso-profiles/  /usr/share/manjaro-tools/',shell=True,check=True)
 
-subprocess.run('buildiso -f -p kde -b stable',shell=True,check=True)
+subprocess.run('buildiso -f -p kde -b stable {kernel}'.format(kernel=data["LinuxKernel"],shell=True,check=True)
 
