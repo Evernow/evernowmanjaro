@@ -54,6 +54,43 @@ def Startup():
     for f in files:
         shutil.move(localconfig + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/.config/' + f)
 
+pacmanconf = open('/etc/pacman.conf', 'a')
+pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
+pacmanconf.close()
+
+
+subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com --noconfirm',shell=True)
+subprocess.run('pacman-key --lsign-key FBA220DFC880C036 --noconfirm',shell=True)
+subprocess.run("pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm",shell=True)
+subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com --noconfirm',shell=True)
+
+pacmanconf = open('/etc/pacman.conf', 'a')
+pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.close()
+
+pacmanconf = open('/etc/pacman.conf', 'a')
+pacmanconf.write('\n[online-repo]\nSigLevel = Optional TrustAll\nInclude = https://raw.githubusercontent.com/Evernow/evernowmanjaro/main/online-repo/online-repo/x86_64')
+pacmanconf.close()
+
+
+
+pacmanconf = open('/iso-profiles/user-repos.conf', 'w+')
+pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.close()
+
+pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
+pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
+pacmanconf.close()
+
+
+
+
+
+pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
+pacmanconf.write('\n[online-repo]\nSigLevel = Optional TrustAll\nInclude = https://raw.githubusercontent.com/Evernow/evernowmanjaro/main/online-repo/online-repo/x86_64')
+pacmanconf.close()
+
+
 
 cleanuppackages()
 AddPackages()
