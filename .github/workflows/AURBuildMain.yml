@@ -28,6 +28,9 @@ jobs:
 
       - name: Run Python inside docker
         run: |
+          sudo systemctl stop docker
+          sudo cp daemon.json /etc/docker/daemon.json # https://gitlab.manjaro.org/tools/development-tools/manjaro-tools/-/issues/323
+          sudo systemctl start docker
           docker create --name=new_container -it manjarolinux/base:latest
           docker start new_container
           docker cp BuildAURPackages/BuildAURPackages.py new_container:/
