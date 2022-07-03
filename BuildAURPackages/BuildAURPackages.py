@@ -10,7 +10,7 @@ subprocess.run('exec 1>&2',shell=True) #https://stackoverflow.com/questions/5866
 packages_to_add = {
                     'mprime-bin': ['AUR', 'mprime'],
                     'gputest': ['AUR', None],
-                    'basemark': ['AUR', None],
+                #    'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
                    'gwe': ['Chaotic AUR', None],
                     'corectrl': ['Chaotic AUR', None],
@@ -35,7 +35,7 @@ def buildAURPackages(AURPACKAGES):
   
     for f in allfiles:
         shutil.move('/AURPackagesToRepo/' + f, '/online-repo/x86_64/' + f)
-    subprocess.run('repo-add /online-repo/x86_64/online-repo.db *.pkg.tar.zst',shell=True,cwd='/{repoaddress}'.format(repoaddress='/online-repo/x86_64'))
+    subprocess.run('repo-add /online-repo/x86_64/online-repo.db.tar *.pkg.tar.zst',shell=True,cwd='/{repoaddress}'.format(repoaddress='/online-repo/x86_64'))
 
 
 def HandleAURdependenciesFromAUR(package):
