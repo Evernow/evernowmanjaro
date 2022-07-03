@@ -124,10 +124,10 @@ pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
 pacmanconf.close()
 
 #Chaotic AUR has gwe and corectrl, two less packages to build is always a win
-subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com --noconfirm',shell=True)
-subprocess.run('pacman-key --lsign-key FBA220DFC880C036 --noconfirm',shell=True)
+subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com',shell=True)
+subprocess.run('pacman-key --lsign-key FBA220DFC880C036 ',shell=True)
 subprocess.run("pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm",shell=True)
-subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com --noconfirm',shell=True)
+subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com',shell=True)
 
 pacmanconf = open('/etc/pacman.conf', 'a')
 pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
