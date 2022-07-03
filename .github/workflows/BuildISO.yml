@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Python inside docker
         run: |
-          docker create --name=new_container -it --cap-add=ALL manjarolinux/base:latest
+          docker create --name=new_container -it --cap-add=ALL --privileged manjarolinux/base:latest
           docker start new_container
           docker cp ISO-Components new_container:/
           docker cp BuildISO.py new_container:/
