@@ -5,11 +5,11 @@ with urllib.request.urlopen("https://github.com/Evernow/evernowmanjaro/raw/main/
     data = json.loads(url.read().decode())
 
 
-subprocess.run('pacman -Syyu --no-confirm',shell=True)
-subprocess.run('pacman -S manjaro-tools-iso git --no-confirm',shell=True)
+subprocess.run('pacman -Syyu --no-confirm',shell=True,check=True)
+subprocess.run('pacman -S manjaro-tools-iso git --no-confirm',shell=True,check=True)
 
 
-subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-profiles.git /iso-profiles')
+subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-profiles.git /iso-profiles',shell=True,check=True)
 
 def cleanuppackages():
     listofpackagefiles = ['Packages-Desktop', 'Packages-Live']
@@ -58,5 +58,5 @@ AddPackages()
 SetupDesktop()
 Startup()
 
-subprocess.run('buildiso -f -p kde -b stable',shell=True)
+subprocess.run('buildiso -f -p kde -b stable',shell=True,check=True)
 
