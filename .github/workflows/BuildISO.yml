@@ -28,7 +28,7 @@ jobs:
 
       - name: Run Python inside docker
         run: |
-          cp daemon.json /etc/docker/daemon.json # https://gitlab.manjaro.org/tools/development-tools/manjaro-tools/-/issues/323
+          sudo cp daemon.json /etc/docker/daemon.json # https://gitlab.manjaro.org/tools/development-tools/manjaro-tools/-/issues/323
           docker create --name=new_container -it --cap-add=ALL --privileged manjarolinux/base:latest
           docker start new_container
           docker cp ISO-Components new_container:/
