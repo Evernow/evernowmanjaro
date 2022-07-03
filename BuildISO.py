@@ -39,18 +39,20 @@ def AddPackages():
 def SetupDesktop():
     localdesktop = '/ISO-Components/etc/Desktop/'
     files = os.listdir(localdesktop)
-    
+    if not os.path.exists('/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop/'):
+        os.makedirs('/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop/')
     for f in files:
-        shutil.move(localdesktop + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop')
+        shutil.move(localdesktop + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop/' + f)
 
 
 def Startup():
     # Does things like make Chika wallpaper and warnings
     localconfig = '/ISO-Components/etc/.config/'
     files = os.listdir(localconfig)
-    
+    if not os.path.exists('/iso-profiles/manjaro/kde/live-overlay/etc/skel/.config/'):
+        os.makedirs('/iso-profiles/manjaro/kde/live-overlay/etc/skel/.config/')
     for f in files:
-        shutil.move(localconfig + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/.config')
+        shutil.move(localconfig + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/.config/' + f)
 
 
 cleanuppackages()
