@@ -1,6 +1,6 @@
 import json
 import urllib.request
-import subprocess
+import subprocess,shutil,os
 with urllib.request.urlopen("https://github.com/Evernow/evernowmanjaro/raw/main/ISOConfig.json") as url:
     data = json.loads(url.read().decode())
 
@@ -10,6 +10,7 @@ subprocess.run('pacman -S manjaro-tools-iso git --no-confirm',shell=True)
 
 
 subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-profiles.git /iso-profiles')
+
 def cleanuppackages():
     listofpackagefiles = ['Packages-Desktop', 'Packages-Live']
     for packagefile in listofpackagefiles:
@@ -34,4 +35,28 @@ def AddPackages():
         PackagesDesktop.write('\n{package}\n'.format(package=package))
     PackagesDesktop.close()
 
+
+def SetupDesktop():
+    localdesktop = '/ISO-Components/etc/Desktop/'
+    files = os.listdir(localdesktop)
+    
+    for f in files:
+        shutil.move(localdesktop + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop')
+
+
+def Startup():
+    # Does things like make Chika wallpaper and warnings
+    localconfig = '/ISO-Components/etc/.config/'
+    files = os.listdir(localconfig)
+    
+    for f in files:
+        shutil.move(localconfig + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/.config')
+
+
+cleanuppackages()
+AddPackages()
+SetupDesktop()
+Startup()
+
+subprocess.run('buildiso -f -p kde -b stable',shell=True)
 
