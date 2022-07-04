@@ -91,6 +91,8 @@ pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.gi
 pacmanconf.close()
 
 subprocess.run('pacman -Syyu --noconfirm',shell=True,check=True)
+for package in data["PackagesToInstall"]:
+    subprocess.run('pacman -Syyu {package}--noconfirm'.format(package=package),shell=True,check=True)
 
 cleanuppackages()
 AddPackages()
