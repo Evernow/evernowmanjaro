@@ -90,9 +90,15 @@ pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
 pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
 pacmanconf.close()
 
-subprocess.run('pacman -Syyu --noconfirm',shell=True,check=True)
-for package in data["PackagesToInstall"]:
-    subprocess.run('pacman -Syyu {package} --noconfirm'.format(package=package),shell=True,check=True)
+
+# Pacman cannot handle git lfs files unfortunately, and from what I've read Pacman author is actively hostile about supporting anything Github specific, so in future will likely move this to Gitlab or ftp
+subprocess.run('pacman -Syyu git-lfs --noconfirm',shell=True,check=True)
+
+subprocess.run('git lfs install',shell=True,check=True)
+
+subprocess.run('git-lfs clone https://github.com/Evernow/evernowmanjaro.git /evernowmanjaropack',shell=True,check=True)
+
+subprocess.run('pacman -U /evernowmanjaropack/online-repo/online-repo/x86_64/*.pkg.tar.zst --noconfirm',shell=True,check=True)
 
 cleanuppackages()
 AddPackages()
