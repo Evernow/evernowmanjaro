@@ -69,7 +69,7 @@ pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
 pacmanconf.close()
 
 pacmanconf = open('/etc/pacman.conf', 'a')
-pacmanconf.write('\n[online-repo]\nSigLevel = Optional TrustAll\nInclude = https://raw.githubusercontent.com/Evernow/evernowmanjaro/main/online-repo/online-repo/x86_64')
+pacmanconf.write('\n[online-repo]\nSigLevel = Never\nInclude = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
 pacmanconf.close()
 
 
@@ -87,7 +87,7 @@ pacmanconf.close()
 
 
 pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
-pacmanconf.write('\n[online-repo]\nSigLevel = Optional TrustAll\nInclude = https://raw.githubusercontent.com/Evernow/evernowmanjaro/main/online-repo/online-repo/x86_64')
+pacmanconf.write('\n[online-repo]\nSigLevel = Never\nInclude = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
 pacmanconf.close()
 
 
