@@ -90,7 +90,7 @@ pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
 pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
 pacmanconf.close()
 
-
+subprocess.run('pacman -Syyu --noconfirm',shell=True,check=True)
 
 cleanuppackages()
 AddPackages()
