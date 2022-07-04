@@ -10,7 +10,7 @@ subprocess.run('exec 1>&2',shell=True) #https://stackoverflow.com/questions/5866
 packages_to_add = {
                     'mprime-bin': ['AUR', 'mprime'],
                     'gputest': ['AUR', None],
-                #    'basemark': ['AUR', None],
+                    'basemark': ['AUR', None],
                     'nvflash': ['AUR', None],
                    'gwe': ['Chaotic AUR', None],
                     'corectrl': ['Chaotic AUR', None],
