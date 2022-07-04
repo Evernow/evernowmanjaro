@@ -74,11 +74,11 @@ pacmanconf.close()
 
 
 
-pacmanconf = open('/iso-profiles/user-repos.conf', 'w+')
+pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'w+')
 pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
 pacmanconf.close()
 
-pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
+pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'a')
 pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
 pacmanconf.close()
 
@@ -86,7 +86,7 @@ pacmanconf.close()
 
 
 
-pacmanconf = open('/iso-profiles/user-repos.conf', 'a')
+pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'a')
 pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
 pacmanconf.close()
 
