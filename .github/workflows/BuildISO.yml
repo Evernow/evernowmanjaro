@@ -22,10 +22,6 @@ jobs:
         with:
           python-version: '3.9'
           
-      - name: Pull Manjaro Docker
-        run: |
-          docker pull manjarolinux/base
-
       - name: Run Python inside docker
         run: |
           sudo systemctl stop docker
