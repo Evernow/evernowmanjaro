@@ -100,6 +100,8 @@ subprocess.run('git clone https://github.com/Evernow/evernowmanjaro.git /evernow
 
 subprocess.run('pacman -U /evernowmanjaropack/online-repo/online-repo/x86_64/*.pkg.tar.zst --noconfirm',shell=True,check=True)
 
+subprocess.run('cp /evernowmanjaropack/online-repo/online-repo/x86_64/*.pkg.tar.zst /var/cache/pacman/pkg/',shell=True,check=True)
+
 cleanuppackages()
 AddPackages()
 SetupDesktop()
