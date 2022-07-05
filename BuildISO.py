@@ -75,7 +75,7 @@ pacmanconf.close()
 
 
 pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'w+')
-pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.write('\n[chaotic-aur]\nSigLevel = Never\nInclude = /etc/pacman.d/chaotic-mirrorlist')
 pacmanconf.close()
 
 
@@ -102,7 +102,7 @@ subprocess.run('rm -r /usr/share/manjaro-tools/iso-profiles/',shell=True,check=T
 subprocess.run('mv iso-profiles/  /usr/share/manjaro-tools/',shell=True,check=True)
 
 pacmanconf = open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/user-repos.conf', 'w+')
-pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.write('\n[chaotic-aur]\nSigLevel = Never\nInclude = /etc/pacman.d/chaotic-mirrorlist')
 pacmanconf.close()
 
 
