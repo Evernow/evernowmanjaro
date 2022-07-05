@@ -12,7 +12,7 @@
                     "gputest": ["AUR", "None"],
                     "basemark": ["AUR", "None"],
                     "nvflash": ["AUR", "None"],
-					"minecraft-launcher": ["AUR", "None"],
+					"minecraft-launcher": ["Chaotic AUR", "None"],
                     "gwe": ["Chaotic AUR", "None"],
                     "corectrl": ["Chaotic AUR", "None"],
                     "python-getdevinfo": ["AUR", "None"], 
