@@ -78,17 +78,9 @@ pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'w+')
 pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
 pacmanconf.close()
 
-pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'a')
-pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
-pacmanconf.close()
 
 
 
-
-
-pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'a')
-pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
-pacmanconf.close()
 
 
 # Pacman cannot handle git lfs files unfortunately, and from what I've read Pacman author is actively hostile about supporting anything Github specific, so in future will likely move this to Gitlab or ftp
@@ -108,6 +100,21 @@ SetupDesktop()
 Startup()
 subprocess.run('rm -r /usr/share/manjaro-tools/iso-profiles/',shell=True,check=True)
 subprocess.run('mv iso-profiles/  /usr/share/manjaro-tools/',shell=True,check=True)
+
+pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'w+')
+pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.close()
+
+
+pacmanconf = open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/user-repos.conf', 'a')
+pacmanconf.write('\n[multilib]\nInclude = /etc/pacman.d/mirrorlist')
+pacmanconf.close()
+
+pacmanconf = open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/user-repos.conf', 'a')
+pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
+pacmanconf.close()
+
+
 
 subprocess.run('buildiso -f -p kde -b stable -k {kernel}'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
 
