@@ -65,18 +65,13 @@ subprocess.run("pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-key
 subprocess.run('pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com',shell=True)
 
 pacmanconf = open('/etc/pacman.conf', 'a')
-pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.write('\n[chaotic-aur]\nServer = https://cdn-mirror.chaotic.cx/$repo/$arch')
 pacmanconf.close()
 
 pacmanconf = open('/etc/pacman.conf', 'a')
 pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.github.io/evernowmanjaro/online-repo/online-repo/x86_64')
 pacmanconf.close()
 
-
-
-pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'w+')
-pacmanconf.write('\n[chaotic-aur]\nSigLevel = Never\nInclude = /etc/pacman.d/chaotic-mirrorlist')
-pacmanconf.close()
 
 
 
@@ -102,7 +97,7 @@ subprocess.run('rm -r /usr/share/manjaro-tools/iso-profiles/',shell=True,check=T
 subprocess.run('mv iso-profiles/  /usr/share/manjaro-tools/',shell=True,check=True)
 
 pacmanconf = open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/user-repos.conf', 'w+')
-pacmanconf.write('\n[chaotic-aur]\nSigLevel = Never\nInclude = /etc/pacman.d/chaotic-mirrorlist')
+pacmanconf.write('\n[chaotic-aur]\nSigLevel = Never\nServer = https://cdn-mirror.chaotic.cx/$repo/$arch')
 pacmanconf.close()
 
 
