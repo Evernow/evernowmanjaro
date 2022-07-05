@@ -26,6 +26,7 @@ jobs:
         run: |
           sudo systemctl stop docker
           sudo cp daemon.json /etc/docker/daemon.json # https://gitlab.manjaro.org/tools/development-tools/manjaro-tools/-/issues/323
+          sudo rm -rf /var/lib/docker
           sudo systemctl start docker
           docker create --name=new_container -it --cap-add=ALL --privileged manjarolinux/base:latest
           docker start new_container
