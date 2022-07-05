@@ -1,3 +1,6 @@
 {
-  "storage-driver": "vfs"
+  "storage-driver": "vfs",
+  "storage-opts": [
+                "dm.basesize=40G"
+        ]
 }
