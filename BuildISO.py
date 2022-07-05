@@ -101,7 +101,7 @@ Startup()
 subprocess.run('rm -r /usr/share/manjaro-tools/iso-profiles/',shell=True,check=True)
 subprocess.run('mv iso-profiles/  /usr/share/manjaro-tools/',shell=True,check=True)
 
-pacmanconf = open('/usr/share/manjaro-tools/user-repos.conf', 'w+')
+pacmanconf = open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/user-repos.conf', 'w+')
 pacmanconf.write('\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist')
 pacmanconf.close()
 
