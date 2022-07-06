@@ -14,7 +14,7 @@ subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-p
 def SetupPhoronixSuite():
     subprocess.run('pacman -S phoronix-test-suite --noconfirm',shell=True,check=True)
     subprocess.run('phoronix-test-suite make-download-cache pts/ddnet pts/realsr-ncnn pts/octanebench pts/gravitymark',shell=True,check=True)
-    subprocess.run('cp /var/cache/phoronix-test-suite/download-cache ISO-Components/etc/Desktop/Configs/',shell=True,check=True)
+    subprocess.run('cp -r /var/lib/phoronix-test-suite/download-cache ISO-Components/etc/Desktop/Configs/',shell=True,check=True)
 
 def cleanuppackages():
     listofpackagefiles = ['Packages-Desktop', 'Packages-Live']
