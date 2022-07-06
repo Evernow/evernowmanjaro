@@ -18,9 +18,9 @@ subprocess.run('sudo rm -rf /var/lib/docker',shell=True)
 
 subprocess.run('sudo systemctl start docker',shell=True)
 
-subprocess.run('sudo service stop docker',shell=True)
+subprocess.run('sudo service docker stop',shell=True)
 
-subprocess.run('sudo service start docker',shell=True)
+subprocess.run('sudo service docker start',shell=True)
 
 
 subprocess.run('docker create --name=new_container -it --cap-add=ALL --privileged manjarolinux/base:latest',shell=True,check=True)
