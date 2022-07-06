@@ -1,9 +1,10 @@
 # Just simplifies building locally
 
 import subprocess
-
-subprocess.run('rm -r /evernowmanjaropack',shell=True)
-
+try:
+  subprocess.run('rm -r /evernowmanjaropack',shell=True)
+except:
+  Pass
 
 subprocess.run('git clone https://github.com/Evernow/evernowmanjaro.git /evernowmanjaropack',shell=True,check=True)
 
