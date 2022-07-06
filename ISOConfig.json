@@ -9,6 +9,7 @@
 					"psensor": ["community", "None"],
 					"discord": ["community", "None"],
 					"mprime-bin": ["AUR", "None"],
+		      			"phoronix-test-suite": ["Chaotic AUR", "None"],
                     "gputest": ["AUR", "None"],
                     "basemark": ["AUR", "None"],
                     "nvflash": ["AUR", "None"],
