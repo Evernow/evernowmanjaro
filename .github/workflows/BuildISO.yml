@@ -27,7 +27,7 @@ jobs:
           docker cp ISO-Components new_container:/
           docker cp BuildISO.py new_container:/
           docker exec --user root --privileged new_container python BuildISO.py
-          docker cp new_container:/var/vache/manjaro-tools /iso
+          docker cp new_container:/var/cache/manjaro-tools /iso
       - name: commit files
         run: |
           git config --local user.email "action@github.com"
