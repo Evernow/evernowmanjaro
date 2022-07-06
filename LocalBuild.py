@@ -8,15 +8,15 @@ except:
 
 subprocess.run('git clone https://github.com/Evernow/evernowmanjaro.git /evernowmanjaropack',shell=True,check=True)
 
-subprocess.run('docker stop $(docker ps -a -q)',shell=True,check=True)
+subprocess.run('docker stop $(docker ps -a -q)',shell=True)
 
-subprocess.run('docker rm $(docker ps -a -q)',shell=True,check=True)
+subprocess.run('docker rm $(docker ps -a -q)',shell=True)
 
 subprocess.run('sudo cp /evernowmanjaropack/daemon.json /etc/docker/daemon.json',shell=True,check=True)
 
-subprocess.run('sudo rm -rf /var/lib/docker',shell=True,check=True)
+subprocess.run('sudo rm -rf /var/lib/docker',shell=True)
 
-subprocess.run('sudo systemctl start docker',shell=True,check=True)
+subprocess.run('sudo systemctl start docker',shell=True)
 
 subprocess.run('docker create --name=new_container -it --cap-add=ALL --privileged manjarolinux/base:latest',shell=True,check=True)
 
