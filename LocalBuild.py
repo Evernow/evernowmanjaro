@@ -27,4 +27,7 @@ subprocess.run('docker cp BuildISO.py new_container:/',shell=True,check=True)
 
 subprocess.run('docker exec --user root --privileged new_container python BuildISO.py',shell=True,check=True)
 
+subprocess.run('mkdir /iso',shell=True)
+
+
 subprocess.run('docker cp new_container:/var/vache/manjaro-tools /iso',shell=True,check=True)
