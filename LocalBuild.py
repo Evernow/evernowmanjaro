@@ -21,9 +21,9 @@ subprocess.run('docker create --name=new_container -it --cap-add=ALL --privilege
 
 subprocess.run('docker start new_container',shell=True,check=True)
 
-subprocess.run('docker cp ISO-Components new_container:/',shell=True,check=True)
+subprocess.run('docker cp /evernowmanjaropack/ISO-Components new_container:/',shell=True,check=True)
 
-subprocess.run('docker cp BuildISO.py new_container:/',shell=True,check=True)
+subprocess.run('docker cp /evernowmanjaropack/BuildISO.py new_container:/',shell=True,check=True)
 
 subprocess.run('docker exec --user root --privileged new_container python BuildISO.py',shell=True,check=True)
 
