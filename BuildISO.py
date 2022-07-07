@@ -77,7 +77,6 @@ pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.gi
 pacmanconf.close()
 
 
-subprocess.run('pacman -S phoronix-test-suite --noconfirm',shell=True,check=True)
 
 
 
@@ -85,6 +84,7 @@ subprocess.run('pacman -S phoronix-test-suite --noconfirm',shell=True,check=True
 
 # Pacman cannot handle git lfs files unfortunately, and from what I've read Pacman author is actively hostile about supporting anything Github specific, so in future will likely move this to Gitlab or ftp
 subprocess.run('pacman -Syyu git-lfs --noconfirm',shell=True,check=True)
+subprocess.run('pacman -S phoronix-test-suite --noconfirm',shell=True,check=True)
 
 subprocess.run('git lfs install',shell=True,check=True)
 
