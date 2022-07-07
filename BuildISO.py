@@ -77,6 +77,7 @@ pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.gi
 pacmanconf.close()
 
 
+subprocess.run('pacman -S phoronix-test-suite --noconfirm',shell=True,check=True)
 
 
 
