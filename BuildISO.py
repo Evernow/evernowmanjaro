@@ -6,7 +6,7 @@ with urllib.request.urlopen("https://github.com/Evernow/evernowmanjaro/raw/main/
 
 
 subprocess.run('pacman -Syyu --noconfirm',shell=True,check=True)
-subprocess.run('pacman -S manjaro-tools-iso git phoronix-test-suite --noconfirm',shell=True,check=True)
+subprocess.run('pacman -S manjaro-tools-iso git --noconfirm',shell=True,check=True)
 
 
 subprocess.run('git clone https://gitlab.manjaro.org/profiles-and-settings/iso-profiles.git /iso-profiles',shell=True,check=True)
