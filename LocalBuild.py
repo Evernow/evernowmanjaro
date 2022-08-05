@@ -3,6 +3,7 @@
 import subprocess
 try:
   subprocess.run('rm -r /evernowmanjaropack',shell=True)
+  subprocess.run('rm -r /iso',shell=True)
 except:
   Pass
 
