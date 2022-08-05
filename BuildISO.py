@@ -90,6 +90,13 @@ subprocess.run('git lfs install',shell=True,check=True)
 
 subprocess.run('git clone https://github.com/Evernow/evernowmanjaro.git /evernowmanjaropack',shell=True,check=True)
 
+subprocess.run('chmod +x /evernowmanjaropack/ISO-Components/etc/Desktop/*',shell=True,check=True)
+
+subprocess.run('chmod +x /evernowmanjaropack/ISO-Components/etc/Desktop/Configs/*',shell=True,check=True)
+
+subprocess.run('chmod +x /evernowmanjaropack/ISO-Components/etc/.config/plasma-workplace/env/*',shell=True,check=True)
+
+
 subprocess.run('pacman -U /evernowmanjaropack/online-repo/online-repo/x86_64/*.pkg.tar.zst --noconfirm',shell=True,check=True)
 
 subprocess.run('cp /evernowmanjaropack/online-repo/online-repo/x86_64/*.pkg.tar.zst /var/cache/pacman/pkg/',shell=True,check=True)
