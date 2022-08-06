@@ -125,6 +125,13 @@ pacmanconf.write('\n[online-repo]\nSigLevel = Never\nServer = https://evernow.gi
 pacmanconf.close()
 
 
+with open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/profile.conf', "r") as file:
+    filedata = file.read()
+
+filedata = filedata.replace("enable_systemd=(", "enable_systemd=(veryimportantsetup ")
+
+# Write the file out again
+with open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/profile.conf', "w") as file:
+    file.write(filedata)subprocess.run('buildiso -f -p kde -b stable -k {kernel}'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
 
 subprocess.run('buildiso -f -p kde -b stable -k {kernel}'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
-
