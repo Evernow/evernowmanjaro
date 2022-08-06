@@ -132,6 +132,6 @@ filedata = filedata.replace("enable_systemd=(", "enable_systemd=(veryimportantse
 
 # Write the file out again
 with open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/profile.conf', "w") as file:
-    file.write(filedata)subprocess.run('buildiso -f -p kde -b stable -k {kernel}'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
-
+    file.write(filedata)
+    
 subprocess.run('buildiso -f -p kde -b stable -k {kernel}'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
