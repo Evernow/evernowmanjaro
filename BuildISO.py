@@ -47,6 +47,7 @@ def SetupDesktop():
         os.makedirs('/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop/')
     for f in files:
         shutil.move(localdesktop + f, '/iso-profiles/manjaro/kde/live-overlay/etc/skel/Desktop/' + f)
+    subprocess.run('chmod +x /iso-profiles/manjaro/kde/live-overlay/etc/skel/*',shell=True,check=True)
 
 
 def Startup():
