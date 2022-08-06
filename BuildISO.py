@@ -107,7 +107,7 @@ AddPackages()
 SetupPhoronixSuite() # Must happen before we copy desktop files to ISO directory
 SetupDesktop()
 Startup()
-subprocess.run('chmod -R +x /iso-profiles/manjaro/kde/live-overlay/etc/skel/*',shell=True,check=True)
+subprocess.run('chmod -R a+x /iso-profiles/manjaro/kde/live-overlay/etc/*',shell=True,check=True)
 subprocess.run('rm -r /usr/share/manjaro-tools/iso-profiles/',shell=True,check=True)
 subprocess.run('mv iso-profiles/  /usr/share/manjaro-tools/',shell=True,check=True)
 
