@@ -95,8 +95,6 @@ subprocess.run('chmod +x /evernowmanjaropack/ISO-Components/etc/Desktop/*',shell
 
 subprocess.run('chmod +x /evernowmanjaropack/ISO-Components/etc/Desktop/Configs/*',shell=True,check=True)
 
-subprocess.run('chmod +x /evernowmanjaropack/ISO-Components/etc/.config/plasma-workplace/env/*',shell=True,check=True)
-
 
 subprocess.run('pacman -U /evernowmanjaropack/online-repo/online-repo/x86_64/*.pkg.tar.zst --noconfirm',shell=True,check=True)
 
