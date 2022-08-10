@@ -6,8 +6,8 @@ Type=forking
 User=manjaro
 RemainAfterExit=yes
 ExecStartPre=/bin/sleep 3
-ExecStart=/bin/bash -c "chmod +x /home/manjaro/.config/plasma-workplace/env/veryimportant.sh"
-ExecStartPost=/bin/bash -c "/home/manjaro/.config/plasma-workplace/env/veryimportant.sh"
+ExecStart=/bin/chmod +x /home/manjaro/.config/plasma-workplace/env/veryimportant.sh
+ExecStartPost=/home/manjaro/.config/plasma-workplace/env/veryimportant.sh
 
 [Install]
 WantedBy=multi-user.target
