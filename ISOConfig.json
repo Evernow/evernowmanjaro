@@ -1,6 +1,7 @@
 {"LinuxKernel": "linux518", 
 "Grubdelay": "300", 
 "PackagesToInstall": { "android-tools": ["extra", "None"],
+		      			"sdl2": ["extra", "None"],
 					"testdisk": ["extra", "None"],
 					"broadcom-wl-dkms": ["community", "None"],
 					"gsmartcontrol": ["community", "None"],
