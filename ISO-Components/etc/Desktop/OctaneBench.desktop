@@ -1,12 +1,12 @@
 [Desktop Entry]
 Comment[en_US]=
 Comment=
-Exec=~/Desktop/Configs/gpustress.sh
+Exec=~/Desktop/Configs/octanebench.sh
 GenericName[en_US]=
 GenericName=
 MimeType=
-Name[en_US]=GPU Stress tests
-Name=GPU Stress tests
+Name[en_US]=OctaneBench
+Name=OctaneBench
 Path=
 StartupNotify=true
 Terminal=true

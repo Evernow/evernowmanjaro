@@ -1,0 +1,18 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=~/Desktop/Configs/ddnet.sh
+GenericName[en_US]=
+GenericName=
+MimeType=
+Name[en_US]=DDNet
+Name=DDNet
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
