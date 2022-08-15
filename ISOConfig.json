@@ -6,6 +6,7 @@
 						"vulkan-icd-loader": ["extra", "None"],
 						"vulkan-tools": ["extra", "None"],
 						"cmake": ["extra", "None"],
+						"clang": ["extra", "None"],
 					"testdisk": ["extra", "None"],
 					"broadcom-wl-dkms": ["community", "None"],
 					"gsmartcontrol": ["community", "None"],
