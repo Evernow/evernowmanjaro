@@ -1,7 +1,7 @@
 #!/bin/sh
  
-chmod +x ~/Desktop/Configs/GravityMark_1.53.run
-echo "y" | ~/Desktop/Configs/GravityMark_1.53.run --quiet --target gravity-install --nox11 --noexec
+chmod +x ~/Desktop/Configs/phoronix-test-suite/download-cache/GravityMark_1.53.run
+echo "y" | ~/Desktop/Configs/phoronix-test-suite/download-cache/GravityMark_1.53.run --quiet --target gravity-install --nox11 --noexec
  
 echo "#!/bin/sh
 cd gravity-install/bin
