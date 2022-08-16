@@ -7,6 +7,7 @@
 						"vulkan-tools": ["extra", "None"],
 						"cmake": ["extra", "None"],
 						"clang": ["extra", "None"],
+						"unzip": ["extra", "None"],
 					"testdisk": ["extra", "None"],
 					"broadcom-wl-dkms": ["community", "None"],
 					"gsmartcontrol": ["community", "None"],
