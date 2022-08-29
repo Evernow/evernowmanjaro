@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/home/manjaro/gravity-install/bin/GravityMark.x64 -raytracing 1 -temporal 1 -fps 1 -info 1 -sensors 1 -benchmark 0 -fulldesktop 1 -vk
+GenericName[en_US]=
+GenericName=
+MimeType=
+Name=GravityMark (VK)
+Path=
+StartupNotify=true
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
