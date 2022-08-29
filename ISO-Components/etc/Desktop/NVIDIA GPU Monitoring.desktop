@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=GPU Monitoring Tool
-Exec=gwe && radeontop
+Exec=gwe
 Type=Application
 Path=/usr/bin
 
