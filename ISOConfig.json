@@ -16,6 +16,7 @@
 					"kdiskmark": ["community", "None"],
 					"libimobiledevice": ["community", "None"], 
 					"psensor": ["community", "None"],
+		      "steam-manjaro": ["multilib", "None"],
 					"discord": ["community", "None"],
 					"mprime-bin": ["AUR", "None"],
 		      			"phoronix-test-suite": ["Chaotic AUR", "None"],
