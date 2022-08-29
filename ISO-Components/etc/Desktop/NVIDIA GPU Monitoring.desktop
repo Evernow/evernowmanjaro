@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=GPU Monitoring Tool
+Name=NVIDIA GPU Monitoring
 Exec=gwe
 Type=Application
 Path=/usr/bin

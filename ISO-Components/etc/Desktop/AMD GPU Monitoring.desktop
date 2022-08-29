@@ -1,6 +1,7 @@
 [Desktop Entry]
-Name=GPU Monitoring Tool
-Exec=radeontop
+Name=AMD GPU Monitoring
+Exec=bash -c 'radeontop'
+Terminal=true
 Type=Application
 Path=/usr/bin
 
