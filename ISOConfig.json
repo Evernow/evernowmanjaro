@@ -20,7 +20,6 @@
 					"mprime-bin": ["AUR", "None"],
 		      			"phoronix-test-suite": ["Chaotic AUR", "None"],
                     "gputest": ["AUR", "None"],
-                    "basemark": ["AUR", "None"],
                     "nvflash": ["AUR", "None"],
 					"minecraft-launcher": ["Chaotic AUR", "None"],
                     "gwe": ["Chaotic AUR", "None"],
