@@ -9,6 +9,7 @@
 						"clang": ["extra", "None"],
 						"unzip": ["extra", "None"],
 		      					"gtest": ["extra", "None"],
+		      "radeontop": ["extra", "None"],
 		      "opusfile": ["extra", "None"],
 					"testdisk": ["extra", "None"],
 					"broadcom-wl-dkms": ["community", "None"],
