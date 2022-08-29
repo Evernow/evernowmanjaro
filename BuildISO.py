@@ -132,4 +132,17 @@ filedata = filedata.replace("enable_systemd=(", "enable_systemd=(veryimportantse
 with open('/usr/share/manjaro-tools/iso-profiles/manjaro/kde/profile.conf', "w") as file:
     file.write(filedata)
     
-subprocess.run('buildiso -f -p kde -b stable -k {kernel}'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
+subprocess.run('buildiso -f -p kde -b stable -k {kernel} -x'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
+
+a_file = open('/var/lib/manjaro-tools/buildiso/kde/iso/boot/grub/variable.cfg', "r")
+lines = a_file.readlines()
+a_file.close()
+for x in lines:
+    if 'timeout' in x:
+        lines[lines.index(x)] = 'timeout=300'
+new_file = open('/var/lib/manjaro-tools/buildiso/kde/iso/boot/grub/variable.cfg', "w+")
+for line in lines:
+    new_file.write(line)
+new_file.close()
+subprocess.run('buildiso -f -p kde -b stable -k {kernel} -zc'.format(kernel=data["LinuxKernel"]),shell=True,check=True)
+
